@@ -1,188 +1,335 @@
 <!DOCTYPE html>
-<!-- @falvojr: Reference article https://www.w3schools.com/howto/howto_website_create_resume.asp -->
-<!-- @falvojr: Useful link to use fontawesome (fa) icons: https://fontawesome.com/v4/icons/ -->
 <html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Wilton Medeiros Mendes Júnior — Currículo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    :root {
+      --bg: #0f172a;            /* slate-900 */
+      --panel: #111827;         /* gray-900 */
+      --panel-2: #0b1220;       /* deeper layer */
+      --text: #e5e7eb;          /* gray-200 */
+      --muted: #9ca3af;         /* gray-400 */
+      --primary: #06b6d4;       /* cyan-500 */
+      --accent: #22d3ee;        /* cyan-400 */
+      --chip: #1f2937;          /* gray-800 */
+      --ok: #22c55e;            /* green-500 */
+      --warn: #f59e0b;          /* amber-500 */
+    }
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0;
+      background: radial-gradient(1200px 800px at 10% -10%, rgba(34,211,238,0.08), transparent 60%),
+                  radial-gradient(1000px 600px at 110% 10%, rgba(6,182,212,0.08), transparent 60%),
+                  var(--bg);
+      color: var(--text);
+      font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      line-height: 1.6;
+    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
 
-  <head>
-    <title>Wilton Jr</title>
-    
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    /* Shell */
+    .wrap { max-width: 1120px; margin: 32px auto; padding: 0 16px; }
 
-    <style>
-      html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
-    </style>
-    
-  </head>
+    /* Social profile header */
+    .profile {
+      position: relative;
+      border-radius: 20px;
+      background:
+        linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02)),
+        radial-gradient(1200px 300px at 50% 0%, rgba(34,211,238,0.1), transparent 70%),
+        var(--panel);
+      box-shadow: 0 30px 60px rgba(0,0,0,.35), inset 0 1px 0 rgba(255,255,255,.03);
+      overflow: hidden;
+    }
+    .cover {
+      height: 160px;
+      background: linear-gradient(90deg, rgba(34,211,238,0.25), rgba(6,182,212,0.15)), url('') center/cover no-repeat;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      position: relative;
+    }
+    .avatar {
+      position: absolute; left: 24px; bottom: -44px;
+      width: 96px; height: 96px; border-radius: 18px;
+      background: linear-gradient(145deg, #0b1020, #151a2c);
+      border: 2px solid rgba(255,255,255,0.1);
+      display: grid; place-items: center;
+      font-weight: 800; font-size: 28px; color: white;
+      box-shadow: 0 16px 40px rgba(0,0,0,.45);
+    }
+    .head {
+      display: grid; gap: 8px; padding: 20px 24px 24px 24px; padding-left: 140px;
+    }
+    .name { font-size: 28px; font-weight: 800; letter-spacing: .2px; }
+    .title { color: var(--muted); font-weight: 600; }
+    .chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 4px; }
+    .chip { padding: 6px 10px; background: var(--chip); color: #cbd5e1; border: 1px solid rgba(255,255,255,0.06); border-radius: 999px; font-size: 12px; }
 
-  <body class="w3-light-grey" cz-shortcut-listen="true">
-  
-    <!-- Page Container -->
-    <div class="w3-content w3-margin-top" style="max-width:1400px;">
-  
-      <!-- The Grid -->
-      <div class="w3-row-padding">
-  
-        <!-- Left Column -->
-        <div class="w3-third">
-  
-          <div class="w3-white w3-text-grey w3-card-4">
-            <!-- @falvojr: This container has been modified to not use a profile picture. -->
-            <div class="w3-container">
-              <h2>Wilton M M Jr</h2>
-            </div>
-            <div class="w3-container">
-              <p><i class="fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-teal"></i>Professor - CEO</p>
-              <p><i class="fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-teal"></i>Engenheiro de Telecomunicações </p>
-              <p><i class="fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-teal"></i>Especialista em TI e Sistemas de Informação</p>
-              <p><i class="fa fa-home fa-fw w3-margin-right w3-large w3-text-teal"></i>Rio de Janeiro</p>
-              <p><i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-teal"></i>notliwjr@gmail.com</p>
-              <p><i class="fa fa-phone fa-fw w3-margin-right w3-large w3-text-teal"></i>(21) 4040-4409</p>
-              <hr>
-  
-              <p class="w3-large">
-                <b><i class="fa fa-asterisk fa-fw w3-margin-right w3-text-teal"></i>Skills</b>
-              </p>
-              <p>HTML</p>
-              <div class="w3-light-grey w3-round-xlarge w3-small">
-                <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:40%">40%</div>
-              </div>
-              <p>CSS</p>
-              <div class="w3-light-grey w3-round-xlarge w3-small">
-                <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:40%">40%</div>
-              </div>
-              <p>Javascript</p>
-              <div class="w3-light-grey w3-round-xlarge w3-small">
-                <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:30%">30%</div>
-              </div>
-              <p>TODO</p>
-              <div class="w3-light-grey w3-round-xlarge w3-small">
-                <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:50%">50%</div>
-              </div>
-              <br>
-  
-              <p class="w3-large w3-text-theme">
-                <b><i class="fa fa-globe fa-fw w3-margin-right w3-text-teal"></i>Idiomas</b>
-              </p>
-              <p>Português</p>
-              <div class="w3-light-grey w3-round-xlarge">
-                <div class="w3-round-xlarge w3-teal" style="height:24px;width:50%"></div>
-              </div>
-              <p>Inglês</p>
-              <div class="w3-light-grey w3-round-xlarge">
-                <div class="w3-round-xlarge w3-teal" style="height:24px;width:50%"></div>
-              </div>
-              <p>TODO</p>
-              <div class="w3-light-grey w3-round-xlarge">
-                <div class="w3-round-xlarge w3-teal" style="height:24px;width:50%"></div>
-              </div>
-              <br>
-            </div>
-          </div><br>
-  
-          <!-- End Left Column -->
+    /* Grid */
+    .grid { display: grid; grid-template-columns: 320px 1fr; gap: 20px; margin-top: 20px; }
+    @media (max-width: 900px) { .grid { grid-template-columns: 1fr; } .head { padding-left: 24px; } .avatar { left: 24px; bottom: -40px; } }
+
+    /* Card */
+    .card {
+      background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)), var(--panel);
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: 16px; padding: 18px 18px; box-shadow: 0 16px 40px rgba(0,0,0,.25);
+    }
+    .card h3 { margin: 0 0 12px 0; font-size: 16px; letter-spacing: .4px; text-transform: uppercase; color: #cbd5e1; }
+
+    /* Contact list */
+    .contact li { list-style: none; margin: 10px 0; display: flex; align-items: center; gap: 10px; color: #d1d5db; }
+    .contact i { width: 18px; text-align: center; color: var(--accent); }
+
+    /* Bars */
+    .bar { height: 10px; background: #0b1220; border-radius: 999px; overflow: hidden; border: 1px solid rgba(255,255,255,0.06); }
+    .bar > span { display: block; height: 100%; background: linear-gradient(90deg, var(--primary), var(--accent)); }
+    .skill { display: grid; grid-template-columns: 1fr auto; gap: 8px; align-items: center; margin: 10px 0; }
+    .skill small { color: #cbd5e1; }
+
+    /* Timeline */
+    .timeline { position: relative; padding-left: 20px; }
+    .timeline:before { content: ""; position: absolute; left: 7px; top: 4px; bottom: 4px; width: 2px; background: rgba(255,255,255,0.12); }
+    .entry { position: relative; margin: 0 0 18px 0; padding-left: 18px; }
+    .entry:before { content: ""; position: absolute; left: -2px; top: 6px; width: 10px; height: 10px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 4px rgba(34,211,238,.15); }
+    .entry h4 { margin: 0; font-size: 16px; }
+    .meta { color: var(--muted); font-size: 13px; margin: 2px 0 6px; }
+    .pill { display: inline-block; padding: 4px 8px; border-radius: 999px; background: #0e1b2c; color: #c7d2fe; border: 1px solid rgba(255,255,255,0.08); font-size: 11px; margin-right: 6px; }
+
+    /* Footer */
+    footer { text-align: center; color: var(--muted); margin: 24px 0 40px; }
+
+    /* Print */
+    @media print {
+      body { background: white; color: #111; }
+      .profile, .card { box-shadow: none; }
+      .cover { display: none; }
+      .avatar { position: static; margin: 0 0 8px; }
+      .head { padding: 16px; }
+      .grid { grid-template-columns: 1fr 1fr; }
+      a { color: #111; text-decoration: underline; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <!-- Social Profile Header -->
+    <section class="profile">
+      <div class="cover"></div>
+      <div class="avatar" aria-label="Avatar">WJ</div>
+      <div class="head">
+        <div class="name">Wilton Medeiros Mendes Júnior</div>
+        <div class="title">CEO • Engenheiro de Telecomunicações • Especialista em TI e Sistemas de Informação</div>
+        <div class="chips" aria-label="Tags">
+          <span class="chip"><i class="fa-solid fa-network-wired"></i> Infra de Redes & Servidores (Linux)</span>
+          <span class="chip"><i class="fa-solid fa-database"></i> QlikView / Qlik Sense</span>
+          <span class="chip"><i class="fa-solid fa-code"></i> Web (PHP/HTML/BD)</span>
+          <span class="chip"><i class="fa-solid fa-person-chalkboard"></i> Docência em TI</span>
         </div>
-  
-        <!-- Right Column -->
-        <div class="w3-twothird">
-    
-          <div class="w3-container w3-card w3-white w3-margin-bottom">
-            <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-terminal fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Sobre</h2>
-            <p>Gostaria de trabalhar onde a minha experiência de 31 anos, possa contribuir com o
-              desenvolvimento da empresa, agregando valores e trocando informações que me permitam
-              aperfeiçoamento profissional, utilizando de minhas habilidades técnicas.</p>
-          </div>
-
-          <div class="w3-container w3-card w3-white w3-margin-bottom">
-            <h2 class="w3-text-grey w3-padding-16">
-              <i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Experiências
-            </h2>
-            <div class="w3-container">
-              <h5 class="w3-opacity"><b>Petrobras Biocombustível - Prestação de Serviços pela Kempetro Engenharia</b></h5>
-              <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Janeiro de 2019 - <span class="w3-tag w3-teal w3-round">Aual</span></h6>
-              <p>Fiscal de campo de contrato; Função de líder de equipe no setor da balança e faturamento na usina de biodiesel em candeias; Faturamento de notas fiscais para expedição de B100 (Biodiesel) e produtos especiais; Tratamento 
-                das notas fiscais de matérias primas e insumos recebidos, entrada de mercadoria (MIGO) no 
-                sistema SAP/R3; Controle de entrada, saída e pesagem de carretas; Atuando na automatização de 
-                processos SAP-Excel; Executar serviços de apoio nas áreas de recursos de administração, 
-                finanças e logística; Atendimento de fornecedores e clientes interno e externo, fornecendo e 
-                recebendo informações sobre produtos e serviços; Tratamento de documentos variados, cumprindo 
-                todo o procedimento necessário referente aos mesmos; Arquivamento de documentos;</p>
-              <hr>
-            </div>
-            <div class="w3-container">
-              <h5 class="w3-opacity"><b>TODO</b></h5>
-              <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>INICIO - FIM</h6>
-              <p>TODO</p>
-            </div>
-          </div>
-  
-          <div class="w3-container w3-card w3-white">
-            <h2 class="w3-text-grey w3-padding-16">
-              <i class="fa fa-graduation-cap fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Educação
-            </h2>
-            <div class="w3-container">
-              <h5 class="w3-opacity"><b>Digital Innovation One (DIO)</b></h5>
-              <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>INICIO - <span class="w3-tag w3-teal w3-round">Atual</span></h6>
-              <p>
-                Maior plataforma de educação aberta em TI da América Latina, com mais 1 milhão de usuários. 
-                A DIO possui parcerias com algumas das empresas mais inovadoras do mundo, proporcionando experiências 
-                de ensino imersivas e com foco em empregabilidade. Nesse contexto, seguem meus principais certificados:
-              </p>
-              <ul>
-                <li><a href="https://www.dio.me/certificate/6213111D" target="_blank">Curso: TQI Fullstack Developer (125h)</a></li>
-                <li><a href="https://www.dio.me/certificate/72361F24" target="_blank">Curso: Formação HTML Web Developer (21h)</a></li>
-                <li><a href="https://www.dio.me/certificate/64CE8868" target="_blank">Curso: Formação CSS Web Developer (46h)</a></li>
-              </ul>
-              <hr>
-            </div>
-            <div class="w3-container">
-              <h5 class="w3-opacity"><b>Centro Educacional Teodoro Sampaio</b></h5>
-              <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>1993 - 1995</h6>
-              <p>Técnico em Contabilidade</p>
-            </div>
-          </div>
-
-          <div class="w3-container w3-card w3-white w3-margin-bottom">
-            <h2 class="w3-text-grey w3-padding-16">
-              <i class="fa fa-git fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Projetos
-            </h2>
-            <div class="w3-container">
-              <h6 class="w3-text-teal">
-                <i class="fa fa-github fa-fw w3-margin-right"></i>
-                <a href="LINK_GITHUB" target="_blank">USUARIO_GITHUB/REPO</a>
-              </h6>
-              <p>TODO</p>
-              <hr>
-            </div>
-            <div class="w3-container">
-              <h6 class="w3-text-teal">
-                <i class="fa fa-gitlab fa-fw w3-margin-right"></i>
-                <a href="LINK_GITLAB" target="_blank">USUARIO_GITLAB/REPO</a>
-              </h6>
-              <p>TODO</p>
-            </div>
-          </div>
-  
-          <!-- End Right Column -->
-        </div>
-  
-        <!-- End Grid -->
       </div>
-  
-      <!-- End Page Container -->
-    </div>
-  
-    <footer class="w3-container w3-teal w3-center w3-margin-top">
-      <p>Minhas Redes Sociais</p>
-      <a href="https://github.com/JorgeSantosxp" target="_blank"><i class="fa fa-github w3-hover-opacity"></i></a>
-      <a href="https://www.linkedin.com/in/jorge-santos-41774793" target="_blank"><i class="fa fa-linkedin w3-hover-opacity"></i></a>
-      <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
-    </footer>
-  
-  </body>
+    </section>
 
+    <div class="grid">
+      <!-- Side -->
+      <aside class="col-left" aria-label="Coluna Lateral">
+        <div class="card">
+          <h3>Contato</h3>
+          <ul class="contact">
+            <li><i class="fa-solid fa-location-dot"></i> Rio de Janeiro, RJ</li>
+            <li><i class="fa-solid fa-phone"></i> <a href="tel:+5521987871109">+55 (21) 98787-1109</a></li>
+            <li><i class="fa-solid fa-envelope"></i> <a href="mailto:wilton.mendes.jr@gmail.com">wilton.mendes.jr@gmail.com</a></li>
+            <li><i class="fa-brands fa-linkedin"></i> <a href="https://www.linkedin.com/in/wiltonmjr" target="_blank" rel="noopener">linkedin.com/in/wiltonmjr</a></li>
+            <li><i class="fa-brands fa-github"></i> <a href="https://github.com/11me-site" target="_blank" rel="noopener">github.com/11me-site</a></li>
+            <li><i class="fa-solid fa-globe"></i> <a href="https://me.tec.br" target="_blank" rel="noopener">me.tec.br</a></li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Competências</h3>
+          <div class="skill"><strong>Linux / Servidores</strong><small>Avançado</small></div>
+          <div class="bar" role="progressbar" aria-label="Linux" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"><span style="width:90%"></span></div>
+
+          <div class="skill"><strong>Infraestrutura de Redes</strong><small>Avançado</small></div>
+          <div class="bar" role="progressbar" aria-label="Infraestrutura" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"><span style="width:85%"></span></div>
+
+          <div class="skill"><strong>QlikView / Qlik Sense</strong><small>Intermediário-Avançado</small></div>
+          <div class="bar" role="progressbar" aria-label="Qlik" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"><span style="width:80%"></span></div>
+
+          <div class="skill"><strong>Banco de Dados</strong><small>Intermediário</small></div>
+          <div class="bar" role="progressbar" aria-label="BD" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"><span style="width:70%"></span></div>
+
+          <div class="skill"><strong>Excel / Automação</strong><small>Avançado</small></div>
+          <div class="bar" role="progressbar" aria-label="Excel" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"><span style="width:85%"></span></div>
+
+          <div class="skill"><strong>Web (PHP/HTML/CSS/JS)</strong><small>Intermediário</small></div>
+          <div class="bar" role="progressbar" aria-label="Web" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"><span style="width:65%"></span></div>
+        </div>
+
+        <div class="card">
+          <h3>Idiomas</h3>
+          <div class="skill"><strong>Português</strong><small>Nativo</small></div>
+          <div class="bar" aria-label="Português" aria-valuenow="100"><span style="width:100%"></span></div>
+          <div class="skill"><strong>Inglês</strong><small>Profissional</small></div>
+          <div class="bar" aria-label="Inglês" aria-valuenow="80"><span style="width:80%"></span></div>
+          <div class="skill"><strong>Espanhol</strong><small>Básico</small></div>
+          <div class="bar" aria-label="Espanhol" aria-valuenow="40"><span style="width:40%"></span></div>
+        </div>
+
+        <div class="card">
+          <h3>Certificações</h3>
+          <p class="pill">Engenharia Linux</p>
+          <p class="pill">G Suite Administrator Fundamentals</p>
+        </div>
+      </aside>
+
+      <!-- Main -->
+      <main class="col-right" aria-label="Conteúdo Principal">
+        <div class="card">
+          <h3>Resumo</h3>
+          <p>Profissional com carreira desenvolvida nas áreas de Tecnologia da Informação e Engenharia, com experiência em infraestrutura de redes e servidores (especialmente Linux), desenvolvimento e modelagem de dados com QlikView/Qlik Sense, implantação de sistemas web e administração de hospedagens. Vivência em docência técnica em TI, gestão de projetos e processos em ambientes corporativos, educacionais, hospitalares, municipal e militar.</p>
+        </div>
+
+        <div class="card">
+          <h3>Experiências</h3>
+          <div class="timeline">
+            <div class="entry">
+              <h4>CEO — ME HOST</h4>
+              <div class="meta">2001 — Atual • Rio de Janeiro</div>
+              <p>Administração de servidor próprio Linux, hospedagem de sites e CMS (WordPress, Joomla, Moodle), implantação e suporte de soluções web para empresas, escolas e escritórios.</p>
+              <div>
+                <span class="pill">Linux</span>
+                <span class="pill">Hospedagem</span>
+                <span class="pill">CMS</span>
+              </div>
+            </div>
+
+            <div class="entry">
+              <h4>Sócio — JP Serviços de Telecomunicações</h4>
+              <div class="meta">2016 — 2019</div>
+              <p>Gestão empresarial e técnica em telecomunicações; implantação de redes e suporte de TI.</p>
+              <div>
+                <span class="pill">Redes</span>
+                <span class="pill">Telecom</span>
+              </div>
+            </div>
+
+            <div class="entry">
+              <h4>Desenvolvedor — W&S Central IT</h4>
+              <div class="meta">2013 — 2015</div>
+              <p>Desenvolvimento em banco de dados, QlikView e Qlik Sense; criação de manuais para usuários.</p>
+              <div>
+                <span class="pill">QlikView</span>
+                <span class="pill">Qlik Sense</span>
+                <span class="pill">Dados</span>
+              </div>
+            </div>
+
+            <div class="entry">
+              <h4>Instrutor/Professor — SENAC RJ &amp; Colégio Info-School</h4>
+              <div class="meta">2006 — 2015</div>
+              <p>Docência em cursos de TI: redes, web e suporte; apoio a coordenações em TI.</p>
+              <div>
+                <span class="pill">Docência</span>
+                <span class="pill">Redes</span>
+                <span class="pill">Web</span>
+              </div>
+            </div>
+
+            <div class="entry">
+              <h4>1º Tenente Engenheiro — Exército Brasileiro</h4>
+              <div class="meta">2007 — 2009</div>
+              <p>Projetos militares, testes em antenas (câmara anecoica), gestão de projetos, licitações e auditorias.</p>
+              <div>
+                <span class="pill">Telecom</span>
+                <span class="pill">Projetos</span>
+              </div>
+            </div>
+
+            <div class="entry">
+              <h4>Engenheiro Clínico — Hospital Estadual Adão Pereira Nunes</h4>
+              <div class="meta">2005 — 2006</div>
+              <p>Responsável por equipamentos eletrônicos hospitalares, infraestrutura predial, rede e telecom.</p>
+              <div>
+                <span class="pill">Saúde</span>
+                <span class="pill">Infraestrutura</span>
+              </div>
+            </div>
+
+            <div class="entry">
+              <h4>Engenharia / Vendas — Instrumentos Lince</h4>
+              <div class="meta">2002 — 2003</div>
+              <p>Propostas técnico-comerciais para equipamentos de produção e área classificada.</p>
+              <div>
+                <span class="pill">Comercial</span>
+                <span class="pill">Engenharia</span>
+              </div>
+            </div>
+
+            <div class="entry">
+              <h4>Coord. de Informática — Secretaria Municipal de Saúde de Magé</h4>
+              <div class="meta">2001</div>
+              <p>Gestão da divisão de informática, manutenção de computadores, implantação de redes e Linux.</p>
+              <div>
+                <span class="pill">Linux</span>
+                <span class="pill">Redes</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Formação Acadêmica</h3>
+          <div class="timeline">
+            <div class="entry">
+              <h4>Mestrado em Gestão Estratégica (ênfase em TI) — FUNIBER (EUA)</h4>
+              <div class="meta">2015</div>
+            </div>
+            <div class="entry">
+              <h4>MBA em Gestão de Negócios e TI — FGV</h4>
+              <div class="meta">2005</div>
+            </div>
+            <div class="entry">
+              <h4>Licenciatura em Sistemas de Informação — UNESA</h4>
+              <div class="meta">2011</div>
+            </div>
+            <div class="entry">
+              <h4>Engenharia de Telecomunicações — UNESA</h4>
+              <div class="meta">2004</div>
+            </div>
+            <div class="entry">
+              <h4>Sistema Móvel Celular — UNESA</h4>
+              <div class="meta">1997</div>
+            </div>
+            <div class="entry">
+              <h4>Técnico em Processamento de Dados — ETVP</h4>
+              <div class="meta">1995</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Publicações & Outros</h3>
+          <p><strong>Publicação:</strong> Transporte Inteligente</p>
+          <p><strong>Patente/Registro:</strong> Primeiro Tenente (Exército Brasileiro)</p>
+        </div>
+
+      </main>
+    </div>
+
+    <footer>
+      <p>© <span id="y"></span> Wilton M. M. Júnior • Feito em HTML/CSS • Hospede no GitHub Pages</p>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
 </html>
